@@ -1,14 +1,11 @@
-# Usa a imagem oficial do MySQL como base
-FROM mysql:latest
+# Usando a imagem oficial do MySQL
+FROM mysql:8.0
 
-# Define variáveis de ambiente para configuração inicial do MySQL
-ENV MYSQL_ROOT_PASSWORD=D@silva12345@
-ENV MYSQL_DATABASE=dbLuna
-ENV MYSQL_USER=sa
-ENV MYSQL_PASSWORD=D@silva123@
+# Definindo variáveis de ambiente
+ENV MYSQL_ROOT_PASSWORD=D@silva0811@
+ENV MYSQL_DATABASE=mydatabase
+ENV MYSQL_USER=myuser
+ENV MYSQL_PASSWORD=D@silva0811@
 
-# Expor a porta 3306 para conexão externa
+# Expondo a porta padrão do MySQL
 EXPOSE 3306
-
-# Comando para iniciar o serviço do MySQL
-CMD ["mysqld"]
